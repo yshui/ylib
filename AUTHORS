@@ -1,0 +1,29 @@
+ylist.h:
+  Imported from Linux kernel, authors (according to git blame):
+    Linus Torvalds
+    Luis R. Rodriguez
+    Oleg Nesterov
+    Randy Dunlap
+    Arnaldo Carvalho de Melo
+    Sasha Levin
+    npiggin@suse.de
+    Frederic Weisbecker
+    Vegard Nossum
+    Shailabh Nagar
+    Pavel Emelyanov
+    Pavel Emelianov
+    Jiri Pirko
+    Dave Jones
+    Zach Brown
+    Robert P. J. Day
+    Masami Hiramatsu
+  Ported by:
+    Max Kellermann
+
+ythread.h:
+  Imported from tinycthread, converted to fit in a header file. Authors:
+    Marcus Geelnard
+    Evan Nemerson
+
+yskiplist.h, yref.h:
+  Yuxuan Shui <yshuiv7@gmail.com>
