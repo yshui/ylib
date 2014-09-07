@@ -11,3 +11,7 @@ A set of C header files, implements a variety of stuffs. The major aim is to bri
 * yref.h: WIP
 * ydef.h: Some useful, compiler-independent macros.
 * compiler.h: Some compiler specific macros.
+
+## exinc/
+
+These are some external dependencies of ylib. I'll sync those headers with upstream regularly, but I'm not the maintainer of those headers.
