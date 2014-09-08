@@ -10,6 +10,7 @@ A set of C header files, implements a variety of stuffs. The major aim is to bri
 * ythread.h: A C11 thread implementation, imported from [TinyCThread](https://tinycthread.github.io)
 * yref.h: WIP
 * ydef.h: Some useful, compiler-independent macros.
+* yrnd.h: Some fast random number generators.
 * compiler.h: Some compiler specific macros.
 
 ## exinc/
