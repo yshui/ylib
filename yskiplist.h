@@ -6,7 +6,13 @@
 
 #include "ydef.h"
 
-#define MAX_HEIGHT 32
+#ifndef MAX_HEIGHT
+# define MAX_HEIGHT 32
+#endif
+
+#ifndef GET_RANDOM
+# define GET_RANDOM (random())
+#endif
 
 struct yskiplist_head {
 	struct yskiplist_head **next, **prev;
@@ -32,7 +38,7 @@ static inline void yskiplist_deinit_head(struct yskiplist_head *h){
 }
 
 static inline int yskiplist_gen_height(void){
-	int r = random();
+	int r = GET_RANDOM;
 	int h = 1;
 	for(;r&1;r>>=1)
 		h++;
