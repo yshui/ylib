@@ -11,6 +11,7 @@ A set of C header files, implements a variety of stuffs. The major aim is to bri
 * yref.h: WIP
 * ydef.h: Some useful, compiler-independent macros.
 * yrnd.h: Some fast random number generators.
+* yatomic.h: A set of atomic functions.
 * compiler.h: Some compiler specific macros.
 
 ## exinc/

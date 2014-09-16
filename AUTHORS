@@ -25,5 +25,10 @@ ythread.h:
     Marcus Geelnard
     Evan Nemerson
 
-yskiplist.h, yref.h:
+yrnd.h:
+  xorshift128p, xorshift1024s:
+    Sebastiano Vigna <vigna@acm.org>
+
+yskiplist.h, yref.h, yatomic.h:
   Yuxuan Shui <yshuiv7@gmail.com>
+
