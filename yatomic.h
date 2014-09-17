@@ -14,7 +14,17 @@
 #include "compiler.h"
 #include "ythread.h"
 
-#if __has_feature(c_atomic) || GCC_CHECK_VERSION(4, 44)
+#ifdef Y_SINGLE_THREAD
+
+typedef int32_t atomic_t;
+# define yatomic_get(x) (*(x))
+# define yatomic_set(x, v) (*(x) = v)
+# define yatomic_inc(x) (*(x)++)
+# define yatomic_dec(x) (*(x)--)
+# define yatomic_add(x, y) (*(x)+=y)
+# define yatomic_init(x) (*(x)=0)
+
+#elif __has_feature(c_atomic) || GCC_CHECK_VERSION(4, 44)
 
 # include <stdatomic.h>
 typedef _Atomic(int32_t) atomic_t;
