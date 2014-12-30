@@ -14,8 +14,6 @@
 #include "yatomic.h"
 #endif
 
-#define YREF_OWNER_RETURN ((void *)(-1))
-
 typedef void (*yref_dtor)(void *);
 
 #ifdef Y_SINGLE_THREAD
