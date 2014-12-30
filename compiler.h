@@ -7,6 +7,7 @@
 #define Y_CLEANUP(x) __attribute__((cleanup(x)))
 
 #if __STDC_VERSION__ >= 201112L
+ #define Y_C11
  #define Y_NORETURN _Noreturn
  #define Y_CTASSERT(x, y) static_assert(x, y)
  #define Y_CTASSERT_GLOBAL(x, y) static_assert(x, y)

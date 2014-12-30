@@ -5,8 +5,6 @@
 #include <assert.h>
 #include <uthash.h>
 
-#include "ylist.h"
-#include "yskiplist.h"
 #include "ydef.h"
 #include "compiler.h"
 #ifndef Y_SINGLE_THREAD
@@ -56,7 +54,7 @@ typedef struct yref_ret {
 	yref_t *info;
 } yref_ret_t;
 
-#define yref_def_scope_out_proto(type, member) void type##_scope_out_func(type **);
+#define yref_def_scope_out_proto(type) void type##_scope_out_func(type **);
 
 #define yref_def_scope_out(type, member) void type##_scope_out_func(type **p) {\
 	_yref_unref(p, &(*p)->member); \

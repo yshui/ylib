@@ -24,7 +24,7 @@ typedef int32_t atomic_t;
 # define yatomic_add(x, y) (*(x)+=y)
 # define yatomic_init(x) (*(x)=0)
 
-#elif __has_feature(c_atomic) || GCC_CHECK_VERSION(4, 44)
+#elif __has_include(<stdatomic.h>) || (Y_C11 && GCC_CHECK_VERSION(4, 9))
 
 # include <stdatomic.h>
 typedef _Atomic(int32_t) atomic_t;
