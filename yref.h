@@ -50,7 +50,6 @@ typedef struct yref_info {
 
 typedef struct yref_ret {
 	void **pp;
-	void *p;
 	yref_t *info;
 } yref_ret_t;
 
@@ -68,12 +67,12 @@ typedef struct yref_ret {
 
 #define yref_ref_return(ret, member) { \
 	_yref_mark_as_return(&(ret), &(ret)->member); \
-	return ((yref_ret_t){&(ret), (ret), &(ret)->member}); \
+	return ((yref_ret_t){&(ret), &(ret)->member}); \
 }
 #define yref_return_get(expr, dst, member) { \
 	yref_ret_t __tmp = (expr); \
-	_yref_move((__tmp->pp, &(dst), __tmp->info, true); \
-	dst = __tmp->p; \
+	_yref_move(__tmp.pp, (void **)&(dst), __tmp.info, true); \
+	dst = __tmp.info->start; \
 }
 
 static inline void yref_init(void *p, yref_t *r, yref_dtor dtor) {
